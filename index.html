@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pomodoro Timer</title>
+    <title>Pomodoro Clock</title>
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Merriweather&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -15,30 +16,30 @@
     <div class="container">
         <div class="timerChanger">
             <h3>Session Length</h3>
-            <div class="changer session">
-                <button class="session__button" value="-1">-</button>
-                <p class="session__display">25</p>
-                <button class="session__button" value=1>+</button>
+            <div class="changer" id="session">
+                <button class="changer__button" value="-1">-</button>
+                <p class="changer__display">25</p>
+                <button class="changer__button" value=1>+</button>
             </div>
         </div>
-        <div class="clock">
+        <div class="clock circle">
             <h4 class="clock__name">Session</h4>
             <p class="clock__display">25 : 00</p>
-            <button class="clock__button">Start</button>
+            <button class="clock__button" onclick=changeTimerSwitch()>Start</button>
         </div>
         <div class="timerChanger">
             <h3>Break Length</h3>
-            <div class="changer break">
-                <button class="break__button" value="-1">-</button>
-                <p class="break__display">5</p>
-                <button class="break__button" value="1">+</button>
+            <div class="changer" id="break">
+                <button class="changer__button" value="-1">-</button>
+                <p class="changer__display">5</p>
+                <button class="changer__button" value="1">+</button>
             </div>
         </div>
     </div>
 
     <div class="buttonOptions">
-        <button class="buttonOptions__button">Stop</button>
-        <button class="buttonOptions__button">Reset</button>
+        <button class="buttonOptions__button" onclick=stopClock()>Stop</button>
+        <button class="buttonOptions__button" onclick=setClock()>Reset</button>
     </div>
     <script src="script.js"></script>
 </body>

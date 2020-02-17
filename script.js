@@ -63,7 +63,7 @@ function changeTime(e) {
 function setClock() {
     breakDisplay.textContent = `${breakTime}`
     sessionDisplay.textContent = `${sessionTime}`
-    clockDisplay.textContent = `Session`
+    currentMode.textContent = "Session"
     timerSwitch = false
     timeInSeconds = sessionTime * 60
     timerToggle.textContent = "Start"
